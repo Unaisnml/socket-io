@@ -7,7 +7,7 @@ app.options('*', cors())
 
 const io = require("socket.io")(8800, {
   cors: {
-      origin: ["https://cathchat.online","https://www.cathchat.online"],
+      origin: ["https://cathchat.online","https://www.cathchat.online","https://www.cathchat.online/","https://cathchat.online/"],
   },
 });
 
