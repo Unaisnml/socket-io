@@ -3,6 +3,7 @@ const cors = require('cors')
 
 const app = express()
 
+app.use(cors());
 app.options('*', cors())
 
 const io = require("socket.io")(8800, {
@@ -11,7 +12,6 @@ const io = require("socket.io")(8800, {
   },
 });
 
-app.use(cors());
 
 let activeUsers = [];
 
