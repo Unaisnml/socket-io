@@ -1,8 +1,17 @@
+const express = require('express')
+const cors = require('cors')
+
+const app = express()
+
+app.options('*', cors())
+
 const io = require("socket.io")(8800, {
   cors: {
-      origin: "https://cathchat.online",
+      origin: ["https://cathchat.online","https://www.cathchat.online"],
   },
 });
+
+app.use(cors());
 
 let activeUsers = [];
 
