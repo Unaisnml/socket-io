@@ -8,7 +8,8 @@ app.use(cors());
 
 const io = require("socket.io")(8800, {
   cors: {
-      origin: ["https://live.cathchat.online","https://www.live.cathchat.online","https://www.live.cathchat.online/","https://live.cathchat.online/"],
+    //   origin: ["https://live.cathchat.online","https://www.live.cathchat.online","https://www.live.cathchat.online/","https://live.cathchat.online/","http://localhost:3000"],
+      origin: ["https://catchatlive.onrender.com"],
       methods: ["GET", "POST"]
   },
 });
